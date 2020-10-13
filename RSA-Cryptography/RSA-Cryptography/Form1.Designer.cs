@@ -31,8 +31,7 @@
             this.labelPublicKey = new System.Windows.Forms.Label();
             this.labelPrivateKey = new System.Windows.Forms.Label();
             this.labelText = new System.Windows.Forms.Label();
-            this.buttonGeneratePublicKey = new System.Windows.Forms.Button();
-            this.buttonGeneratePrivateKey = new System.Windows.Forms.Button();
+            this.buttonGenerateKeys = new System.Windows.Forms.Button();
             this.buttonEncrypta = new System.Windows.Forms.Button();
             this.textBoxPublicKey = new System.Windows.Forms.TextBox();
             this.textBoxPrivateKey = new System.Windows.Forms.TextBox();
@@ -67,23 +66,15 @@
             this.labelText.TabIndex = 2;
             this.labelText.Text = "Text:";
             // 
-            // buttonGeneratePublicKey
+            // buttonGenerateKeys
             // 
-            this.buttonGeneratePublicKey.Location = new System.Drawing.Point(450, 4);
-            this.buttonGeneratePublicKey.Name = "buttonGeneratePublicKey";
-            this.buttonGeneratePublicKey.Size = new System.Drawing.Size(135, 23);
-            this.buttonGeneratePublicKey.TabIndex = 3;
-            this.buttonGeneratePublicKey.Text = "Generate Public Key";
-            this.buttonGeneratePublicKey.UseVisualStyleBackColor = true;
-            // 
-            // buttonGeneratePrivateKey
-            // 
-            this.buttonGeneratePrivateKey.Location = new System.Drawing.Point(450, 39);
-            this.buttonGeneratePrivateKey.Name = "buttonGeneratePrivateKey";
-            this.buttonGeneratePrivateKey.Size = new System.Drawing.Size(135, 23);
-            this.buttonGeneratePrivateKey.TabIndex = 4;
-            this.buttonGeneratePrivateKey.Text = "Generate Private Key";
-            this.buttonGeneratePrivateKey.UseVisualStyleBackColor = true;
+            this.buttonGenerateKeys.Location = new System.Drawing.Point(450, 21);
+            this.buttonGenerateKeys.Name = "buttonGenerateKeys";
+            this.buttonGenerateKeys.Size = new System.Drawing.Size(135, 23);
+            this.buttonGenerateKeys.TabIndex = 3;
+            this.buttonGenerateKeys.Text = "Generate Keys";
+            this.buttonGenerateKeys.UseVisualStyleBackColor = true;
+            this.buttonGenerateKeys.Click += new System.EventHandler(this.buttonGenerateKeys_Click);
             // 
             // buttonEncrypta
             // 
@@ -93,6 +84,7 @@
             this.buttonEncrypta.TabIndex = 5;
             this.buttonEncrypta.Text = "Encrypta";
             this.buttonEncrypta.UseVisualStyleBackColor = true;
+            this.buttonEncrypta.Click += new System.EventHandler(this.buttonEncrypta_Click);
             // 
             // textBoxPublicKey
             // 
@@ -124,6 +116,7 @@
             this.buttonDecrypta.TabIndex = 9;
             this.buttonDecrypta.Text = "Decrypta";
             this.buttonDecrypta.UseVisualStyleBackColor = true;
+            this.buttonDecrypta.Click += new System.EventHandler(this.buttonDecrypta_Click);
             // 
             // Form1
             // 
@@ -135,8 +128,7 @@
             this.Controls.Add(this.textBoxPrivateKey);
             this.Controls.Add(this.textBoxPublicKey);
             this.Controls.Add(this.buttonEncrypta);
-            this.Controls.Add(this.buttonGeneratePrivateKey);
-            this.Controls.Add(this.buttonGeneratePublicKey);
+            this.Controls.Add(this.buttonGenerateKeys);
             this.Controls.Add(this.labelText);
             this.Controls.Add(this.labelPrivateKey);
             this.Controls.Add(this.labelPublicKey);
@@ -152,8 +144,7 @@
         private System.Windows.Forms.Label labelPublicKey;
         private System.Windows.Forms.Label labelPrivateKey;
         private System.Windows.Forms.Label labelText;
-        private System.Windows.Forms.Button buttonGeneratePublicKey;
-        private System.Windows.Forms.Button buttonGeneratePrivateKey;
+        private System.Windows.Forms.Button buttonGenerateKeys;
         private System.Windows.Forms.Button buttonEncrypta;
         private System.Windows.Forms.TextBox textBoxPublicKey;
         private System.Windows.Forms.TextBox textBoxPrivateKey;
