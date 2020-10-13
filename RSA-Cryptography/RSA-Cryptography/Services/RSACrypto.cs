@@ -47,7 +47,7 @@ namespace RSA_Cryptography.Services
             }
             catch (Exception e)
             {
-                return e.Message;
+                throw e;
             }
         }
      
@@ -69,7 +69,7 @@ namespace RSA_Cryptography.Services
             }
             catch (Exception e)
             {
-                return e.Message;
+                throw e;
             }
         }
 

@@ -15,21 +15,42 @@ namespace RSA_Cryptography
 
         private void buttonGenerateKeys_Click(object sender, EventArgs e)
         {
-            var publicKeyPath = textBoxPublicKey.Text;
-            var privateKeyPath = textBoxPrivateKey.Text;
-            new RSACrypto().SalvaChavesRSA(publicKeyPath, privateKeyPath);
+            try
+            {
+                var publicKeyPath = textBoxPublicKey.Text;
+                var privateKeyPath = textBoxPrivateKey.Text;
+                new RSACrypto().SalvaChavesRSA(publicKeyPath, privateKeyPath);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Failed generating keys");
+            }
         }
 
         private void buttonEncrypta_Click(object sender, EventArgs e)
         {
-            var encryptedText = new RSACrypto().EncryptaData(textBoxText.Text, textBoxPublicKey.Text);
-            textBoxText.Text = encryptedText;
+            try
+            {
+                var encryptedText = new RSACrypto().EncryptaData(textBoxText.Text, textBoxPublicKey.Text);
+                textBoxText.Text = encryptedText;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Failed encrypting");
+            }
         }
 
         private void buttonDecrypta_Click(object sender, EventArgs e)
         {
-            var encryptedText = new RSACrypto().DecryptaData(textBoxText.Text, textBoxPrivateKey.Text);
-            textBoxText.Text = encryptedText;
+            try
+            {
+                var encryptedText = new RSACrypto().DecryptaData(textBoxText.Text, textBoxPrivateKey.Text);
+                textBoxText.Text = encryptedText;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Failed decrypting");
+            }
         }
     }
 }
