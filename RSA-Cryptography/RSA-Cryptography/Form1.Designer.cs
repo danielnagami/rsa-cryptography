@@ -133,7 +133,7 @@
             this.Controls.Add(this.labelPrivateKey);
             this.Controls.Add(this.labelPublicKey);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "RSA Cryptography";
             this.ResumeLayout(false);
             this.PerformLayout();
 
